@@ -24,6 +24,7 @@
 }
 
 .nav {
+    position: relative;
     background-color: var(--violeta);
     margin-bottom: 10px;
     height: 5rem;
@@ -51,6 +52,7 @@
     font-size: 6rem;
     font-family: 'Caveat', cursive;
     font-weight: 600;
+    text-align: center;
     color: #000;
 }
 
@@ -126,4 +128,38 @@
 .cuerpo__turnos {
     background-image: url("../imagenes/turno-proximamente.jpg");
     background-size: cover;
+}
+
+/*Media querries para pantallas pequeñas*/
+
+@media (max-width: 768px) {
+    .nav {
+        display: block;
+    }
+
+    .nav-item {
+        margin-bottom: 10px;
+    }
+
+    /*Ocultar los enlaces del menú*/
+
+    .nav-item:not(:first-child) {
+        display: none;
+    }
+
+    /*Estilo para el botón que despliega el menú*/
+
+    .nav__logo {
+        display: block;
+    }
+
+    /* Agregar estilos para el menú desplegable */
+    .nav__menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: var(--violeta);
+        z-index: 999;
+    }
 }
