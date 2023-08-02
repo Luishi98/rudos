@@ -1,165 +1,237 @@
 /*Estilos generales*/
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .cuerpo {
-    background-image: url(../imagenes/fondo__galeria2.jpg);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+  background-image: url(../imagenes/fondo__galeria2.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 /*Variables*/
 :root {
-    --violeta: #A00EC0;
-    --violeta_oscuro: rgb(56, 7, 40);
+  --violeta: #555;
+  --violeta_oscuro: #222;
 }
 
 /*Barra de navegacion*/
 .logo {
-    height: 5rem;
+  height: 5rem;
 }
 
 .nav {
-    position: relative;
-    background-color: var(--violeta);
-    margin-bottom: 10px;
-    height: 5rem;
-    align-items: center;
+  position: relative;
+  background-color: var(--violeta);
+  margin-bottom: 10px;
+  height: 5rem;
+  align-items: center;
 }
 
 .nav-item {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 .nav-link {
-    color: #000;
-    text-decoration: none;
+  color: #000;
+  text-decoration: none;
 }
 
 /*Index*/
 .index__titulo {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
 }
 
 .index__titulo h1 {
-    font-size: 6rem;
-    font-family: 'Caveat', cursive;
-    font-weight: 600;
-    text-align: center;
-    color: #000;
+  font-size: 6rem;
+  font-family: "Caveat", cursive;
+  font-weight: 600;
+  text-align: center;
+  color: #000;
 }
 
 .index__imagen {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    height: 40vh;
-    filter: contrast(1.5);
-    image-rendering: crisp-edges;
-    shape-rendering: crispEdges;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 40vh;
+  filter: contrast(1.5);
+  image-rendering: crisp-edges;
+  shape-rendering: crispEdges;
 }
 
 /*Galeria*/
 .logo__titulo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo__titulo img {
-    height: 10rem;
+  height: 10rem;
 }
 
 .contenedor {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-auto-flow: auto;
-    gap: 20px;
-    margin: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-flow: auto;
+  gap: 20px;
+  margin: 30px;
 }
 
 .item {
-    width: 250px;
-    height: 250px;
-    overflow: hidden;
-    margin: auto;
-    border: 2px solid var(--violeta);
-    border-radius: .3rem;
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  margin: auto;
+  border: 2px solid var(--violeta);
+  border-radius: 0.3rem;
 }
- 
+
 .carousel {
-    max-width: 250px;
+  max-width: 250px;
 }
 
 /*Redes*/
-.instagram__foto, .instagram__link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.instagram__foto,
+.instagram__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .instagram__foto img {
-    width: 22rem;
-    border-radius: 50%;
-    margin: 2rem auto;
+  width: 22rem;
+  border-radius: 50%;
+  margin: 2rem auto;
 }
 
 .btn {
-    border-color: var(--violeta);
-    background-color: var(--violeta);
-    font-family: Verdana, serif;
-    font-size: 2rem;
-    border-radius: .7rem;
+  border-color: var(--violeta);
+  background-color: var(--violeta);
+  font-family: Verdana, serif;
+  font-size: 2rem;
+  border-radius: 0.7rem;
 }
 
-.btn:hover, .btn:active, .btn:visited {
-    background-color: var(--violeta_oscuro) !important;
-    border: none;
+.btn:hover,
+.btn:active,
+.btn:visited {
+  background-color: var(--violeta_oscuro) !important;
+  border: none;
 }
 
 /*Turnos*/
 .cuerpo__turnos {
-    background-image: url("../imagenes/turno-proximamente.jpg");
-    background-size: cover;
+  background-image: url("../imagenes/turno-proximamente.jpg");
+  background-size: cover;
 }
 
 /*Media querries para pantallas pequeñas*/
 
 @media (max-width: 768px) {
-    .nav {
-        display: block;
-    }
+  /*ChatGTP*/
 
-    .nav-item {
-        margin-bottom: 10px;
-    }
+  .nav {
+    display: block;
+  }
 
-    /*Ocultar los enlaces del menú*/
+  .nav-item {
+    margin-bottom: 10px;
+  }
 
-    .nav-item:not(:first-child) {
-        display: none;
-    }
+  /*Ocultar los enlaces del menú*/
 
-    /*Estilo para el botón que despliega el menú*/
+  .nav-item:not(:first-child) {
+    display: none;
+  }
 
-    .nav__logo {
-        display: block;
-    }
+  /*Estilo para el botón que despliega el menú*/
 
-    /* Agregar estilos para el menú desplegable */
-    .nav__menu {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background-color: var(--violeta);
-        z-index: 999;
-    }
+  .nav__logo {
+    display: block;
+  }
+
+  /* Agregar estilos para el menú desplegable */
+  .nav__menu {
+    background-color: var(--violeta);
+    z-index: 999;
+  }
+
+  /*Diseño del menu desplegable*/
+  .index__titulo h1 {
+    font-size: 2rem;
+  }
+
+  .index__imagen {
+    height: 5rem;
+    position: relative;
+    z-index: -1;
+  }
+
+  .nav__logo {
+    width: 100%;
+  }
+
+  .logo {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: 4.8rem;
+  }
+
+  .nav-item {
+    background-color: var(--violeta);
+    margin: 0;
+    text-align: center;
+  }
+
+  .nav__logo,
+  .nav-item {
+    border: 2px solid #000;
+    border-radius: 0.3rem;
+  }
+
+  /*Galeria*/
+  .contenedor {
+    position: relative;
+    z-index: -1;
+  }
+
+  .logo__titulo img {
+    height: 6rem;
+  }
+
+  .contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-auto-flow: auto;
+    gap: 10px;
+    margin: 15px;
+  }
+
+  .item {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    margin: auto;
+    border: 2px solid var(--violeta);
+    border-radius: 0.3rem;
+  }
+
+  /*Redes*/
+  .instagram__foto img {
+    width: 11rem;
+    margin: 1.2rem auto;
+  }
+
+  .btn {
+    font-size: 1.2rem;
+  }
 }

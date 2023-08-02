@@ -1,6 +1,7 @@
 // Obtener elementos necesarios
 const nav = document.querySelector(".nav");
 const navItems = document.querySelectorAll(".nav-item:not(:first-child)");
+const contenedor = document.querySelector(".contenedor");
 
 // Función para mostrar/ocultar el menú desplegable
 function toggleMenu() {
@@ -12,6 +13,8 @@ function toggleMenu() {
     });
 
     nav.classList.toggle("nav__menu--open");
+
+    contenedor.style.position = isMenuOpen ? "static" : "relative";
   }
 }
 
