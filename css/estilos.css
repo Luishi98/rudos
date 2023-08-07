@@ -51,6 +51,7 @@
 
 .nav-item {
   font-size: 2rem;
+  text-shadow: 5px 5px 5px #333;
 }
 
 .nav-link {
@@ -76,8 +77,9 @@
 .index__foto img {
   width: 18rem;
   height: 18rem;
-  border: 2px solid #444;
+  border: 3px solid #444;
   border-radius: 50%;
+  box-shadow: 10px 15px 10px #333;
 }
 
 .index__titulo {
@@ -93,6 +95,7 @@
   font-weight: 600;
   text-align: center;
   color: #000;
+  text-shadow: 10px 15px 10px #333;
 }
 
 .index__imagen {
